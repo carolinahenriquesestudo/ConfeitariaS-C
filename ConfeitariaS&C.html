@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ConfeitariaS&C - LOGIN</title>
+  <link rel="stylesheet" href="Confeitaria.css">
+</head>
+<body>
+
+  <div class="caixa-login">
+    <img src="logoConfeitaria.png" class="logo-confeitaria" alt="Logo da Confeitaria S&C">
+
+    <form id="formLogin">
+      <input type="text" placeholder="E-MAIL/USUÁRIO" required>
+      <input type="password" placeholder="SENHA" required>
+
+      <p>Escolha o perfil:</p>
+ 
+      <label><input type="radio" name="perfil" value="administrador" required> Administrador</label>
+      <label><input type="radio" name="perfil" value="confeiteiro"> Confeiteiro</label>
+      <label><input type="radio" name="perfil" value="entregador"> Entregador</label>
+ 
+      <button type="submit">Entrar</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('formLogin').addEventListener('submit', function(event) {
+      event.preventDefault(); 
+
+     
+      var perfil = document.querySelector('input[name="perfil"]:checked').value;
+
+      window.location.href = perfil + '.html';
+    });
+  </script>
+
+</body>
+</html>
