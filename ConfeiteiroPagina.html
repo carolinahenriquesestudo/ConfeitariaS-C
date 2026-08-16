@@ -120,16 +120,16 @@
         </div>
 
         <!-- CARD 3: Produtos Populares -->
-        <div class="card">
+       <div class="card">
           <div class="card-header centro">
             <span>Produtos Populares</span>
           </div>
           <div class="carrossel-produto">
-            <button class="seta" id="btn-prev">&lt;</button>
+            <button class="seta" id="btn-prev" onclick="mudarFoto(-1)">&lt;</button>
             <div class="imagem-container">
               <img src="brownie.png" alt="Brownie Ninho/Brigadeiro" id="img-produto">
             </div>
-            <button class="seta" id="btn-next">&gt;</button>
+            <button class="seta" id="btn-next" onclick="mudarFoto(1)">&gt;</button>
           </div>
           <div class="nome-produto" id="nome-produto">
             Brownie Ninho/Brigadeiro
@@ -156,6 +156,35 @@
     </main>
 
   </div>
+  <!-- SCRIPT DO CARROSSEL -->
+  <script>
+    // Altere/adicione aqui os caminhos das fotos e os nomes dos produtos
+    const produtos = [
+      { imagem: 'brownie.png', nome: 'Brownie Ninho/Brigadeiro' },
+      { imagem: 'bolo.png', nome: 'Bolo de Morango' },
+      { imagem: 'cupcake.png', nome: 'Cupcake de Chocolate' }
+    ];
+
+    let indiceAtual = 0;
+
+    function mudarFoto(direcao) {
+      indiceAtual += direcao;
+
+      if (indiceAtual >= produtos.length) {
+        indiceAtual = 0;
+      }
+      
+      if (indiceAtual < 0) {
+        indiceAtual = produtos.length - 1;
+      }
+
+      document.getElementById('img-produto').src = produtos[indiceAtual].imagem;
+      document.getElementById('nome-produto').textContent = produtos[indiceAtual].nome;
+    }
+  </script>
+
+</body>
+</html>
 
 </body>
 </html>
