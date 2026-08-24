@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ConfeitariaS&C - Painel do Administrador</title>
+  <link rel="stylesheet" href="ConfeiteiroeAdmPagina.css">
+</head>
+<body>
+
+  <div class="container">
+    
+    <aside class="sidebar">
+      <div class="logo-area">
+        <img src="logoConfeitaria.png" alt="Logo Confeitaria S&C" class="logo">
+      </div>
+
+      <nav class="menu-icons">
+        <a href="confeiteiro.html" class="item-menu active">
+          <div class="circulo-icone">
+            <img src="home.png" alt="Home">
+          </div>
+          <span>Home</span>
+        </a>
+
+        <a href="pedidos.html" class="item-menu">
+          <div class="circulo-icone">
+            <img src="pedidos.png" alt="Pedidos">
+          </div>
+          <span>Pedidos</span>
+        </a>
+
+        <a href="clientes.html" class="item-menu">
+          <div class="circulo-icone">
+            <img src="clientes.png" alt="Clientes">
+          </div>
+          <span>Clientes</span>
+        </a>
+
+        <a href="produtos.html" class="item-menu">
+          <div class="circulo-icone">
+            <img src="produtos.png" alt="Produtos">
+          </div>
+          <span>Produtos</span>
+        </a>
+
+        <a href="estoque.html" class="item-menu">
+          <div class="circulo-icone">
+            <img src="estoque.png" alt="Estoque">
+          </div>
+          <span>Estoque</span>
+        </a>
+
+        <a href="produção.html" class="item-menu">
+          <div class="circulo-icone">
+            <img src="producao.png" alt="produção">
+          </div>
+          <span>Produção</span>
+        </a>
+
+        <a href="relatorios.html" class="item-menu">
+          <div class="circulo-icone">
+            <img src="relatorios.png" alt="Relatórios">
+          </div>
+          <span>Relatórios</span>
+        </a>
+
+        <a href="financeiro.html" class="item-menu">
+          <div class="circulo-icone">
+            <img src="financeiro.png" alt="Financeiro">
+          </div>
+          <span>Financeiro</span>
+        </a>
+        
+        <a href="entregas.html" class="item-menu">
+          <div class="circulo-icone">
+            <img src="entregas.png" alt="Entregas">
+          </div>
+          <span>Entregas</span>
+        </a>
+
+        <a href="ajustes.html" class="item-menu">
+          <div class="circulo-icone">
+            <img src="ajustes.png" alt="Ajustes">
+          </div>
+          <span>Ajustes</span>
+        </a>
+      </nav>
+    </aside>
+
+
+    <main class="main-content">
+      
+ 
+      <header class="header-top">
+        <div class="saudacao">
+          Olá, <span id="nome-usuario">Administrador(a)</span>
+        </div>
+        <div class="perfil-avatar">
+          <img src="administrador.png" alt="Perfil">   
+        </div>
+      </header>
+
+    
+      <section class="dashboard-grid">
+        
+       
+        <div class="card">
+          <div class="card-header">
+            <span>Pedidos hoje</span>
+            <img src="carrinho.png" alt="Carrinho" class="icone-carrinho">
+          </div>
+          <div class="card-valor big-number" id="pedidos-hoje">
+            15
+          </div>
+        </div>
+
+      
+        <div class="card">
+          <div class="card-header centro">
+            <span>Faturamento</span>
+          </div>
+          <div class="card-valor big-number" id="faturamento-total">
+            R$12.000,00
+          </div>
+        </div>
+
+   
+       <div class="card">
+          <div class="card-header centro">
+            <span>Produtos Populares</span>
+          </div>
+          <div class="carrossel-produto">
+            <button class="seta" id="btn-prev" onclick="mudarFoto(-1)">&lt;</button>
+            <div class="imagem-container">
+              <img src="brownie.png" alt="Brownie Ninho/Brigadeiro" id="img-produto">
+            </div>
+            <button class="seta" id="btn-next" onclick="mudarFoto(1)">&gt;</button>
+          </div>
+          <div class="nome-produto" id="nome-produto">
+            Brownie Ninho/Brigadeiro
+          </div>
+        </div>
+
+     
+        <div class="card">
+          <div class="card-header centro">
+            <span>Vendas Semanais</span>
+          </div>
+          <div class="grafico-container">
+            <div class="grafico-barras">
+              <div class="barra barra-1"></div>
+              <div class="barra barra-2"></div>
+              <div class="barra barra-3"></div>
+            </div>
+            <div class="linha-base"></div>
+          </div>
+        </div>
+
+      </section>
+
+    </main>
+
+  </div>
+
+  <script>
+    
+    const produtos = [
+      { imagem: 'brownie.png', nome: 'Brownie Ninho/Brigadeiro' },
+      { imagem: 'bolo.png', nome: 'Bolo de Morango' },
+      { imagem: 'cupcake.png', nome: 'Cupcake de Chocolate' }
+    ];
+
+    let indiceAtual = 0;
+
+    function mudarFoto(direcao) {
+      indiceAtual += direcao;
+
+      if (indiceAtual >= produtos.length) {
+        indiceAtual = 0;
+      }
+      
+      if (indiceAtual < 0) {
+        indiceAtual = produtos.length - 1;
+      }
+
+      document.getElementById('img-produto').src = produtos[indiceAtual].imagem;
+      document.getElementById('nome-produto').textContent = produtos[indiceAtual].nome;
+    }
+  </script>
+
+</body>
+</html>
+
+</body>
+</html>

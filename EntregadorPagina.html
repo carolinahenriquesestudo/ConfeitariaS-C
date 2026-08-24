@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ConfeitariaS&C - Painel do Entregador</title>
+  <link rel="stylesheet" href="EntregadorPagina.css">
+</head>
+<body>
+
+  <div class="container">
+    
+  
+    <aside class="sidebar">
+      <div class="logo-area">
+        <img src="logoConfeitaria.png" alt="Logo Confeitaria S&C" class="logo">
+      </div>
+
+      <nav class="menu-icons">
+        <a href="confeiteiro.html" class="item-menu active">
+          <div class="circulo-icone">
+            <img src="home.png" alt="Home">
+          </div>
+          <span>Home</span>
+        </a>
+
+        <a href="pedidos.html" class="item-menu">
+          <div class="circulo-icone">
+            <img src="pedidos.png" alt="Pedidos">
+          </div>
+          <span>Pedidos</span>
+        </a>
+
+        <a href="clientes.html" class="item-menu">
+          <div class="circulo-icone">
+            <img src="clientes.png" alt="Clientes">
+          </div>
+          <span>Clientes</span>
+        </a>
+
+        <a href="#" class="item-menu desativado">
+          <div class="circulo-icone">
+            <img src="produtos.png" alt="Produtos">
+          </div>
+          <span>Produtos</span>
+        </a>
+
+        <a href="#" class="item-menu desativado">
+          <div class="circulo-icone">
+            <img src="estoque.png" alt="Estoque">
+          </div>
+          <span>Estoque</span>
+        </a>
+
+        <a href="#" class="item-menu desativado">
+          <div class="circulo-icone">
+            <img src="producao.png" alt="produção">
+          </div>
+          <span>Produção</span>
+        </a>
+
+        <a href="relatorios.html" class="item-menu">
+          <div class="circulo-icone">
+            <img src="relatorios.png" alt="Relatórios">
+          </div>
+          <span>Relatórios</span>
+        </a>
+
+        <a href="#" class="item-menu desativado">
+          <div class="circulo-icone">
+            <img src="financeiro.png" alt="Financeiro">
+          </div>
+          <span>Financeiro</span>
+        </a>
+        
+        <a href="entregas.html" class="item-menu">
+          <div class="circulo-icone">
+            <img src="entregas.png" alt="Entregas">
+          </div>
+          <span>Entregas</span>
+        </a>
+
+        <a href="ajustes.html" class="item-menu">
+          <div class="circulo-icone">
+            <img src="ajustes.png" alt="Ajustes">
+          </div>
+          <span>Ajustes</span>
+        </a>
+      </nav>
+    </aside>
+
+   
+    <main class="main-content">
+      
+     
+      <header class="header-top">
+        <div class="saudacao">
+          Olá, <span id="nome-usuario">Entregador(a)</span>
+        </div>
+        <div class="perfil-avatar">
+          <img src="entregador.png" alt="Perfil">
+        </div>
+      </header>
+
+     
+      <section class="dashboard-grid">
+        
+     
+        <div class="card card-full">
+          <div class="card-header centro">
+            <span>Entregas Disponíveis</span>
+          </div>
+          
+          <div class="container-mapas">
+            
+          
+            <a href="detalhes-entrega.html?id=1" class="card-mapa">
+              <div class="mapa-placeholder">
+                <iframe src="https://maps.google.com/maps?q=Centro,Campos&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no"></iframe>
+              </div>
+              <div class="info-entrega">
+                <strong>Bairro: Centro</strong>
+                <span>Rua Treze de Maio, 120</span>
+              </div>
+            </a>
+
+          
+            <a href="detalhes-entrega.html?id=2" class="card-mapa">
+              <div class="mapa-placeholder">
+                <iframe src="https://maps.google.com/maps?q=Pelinca,Campos&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no"></iframe>
+              </div>
+              <div class="info-entrega">
+                <strong>Bairro: Pelinca</strong>
+                <span>Av. Pelinca, 45</span>
+              </div>
+            </a>
+
+          
+            <a href="detalhes-entrega.html?id=3" class="card-mapa">
+              <div class="mapa-placeholder">
+                <iframe src="https://maps.google.com/maps?q=Guarus,Campos&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no"></iframe>
+              </div>
+              <div class="info-entrega">
+                <strong>Bairro: Guarus</strong>
+                <span>Rua Nazareno, 88</span>
+              </div>
+            </a>
+
+          </div>
+        </div>
+        
+     
+        <div class="linha-inferior">
+          
+      
+          <div class="card">
+            <div class="card-header centro">
+              <span>Entregas Semanais</span>
+            </div>
+            <div class="grafico-container">
+              <div class="grafico-barras">
+                <div class="barra barra-1"></div>
+                <div class="barra barra-2"></div>
+                <div class="barra barra-3"></div>
+              </div>
+              <div class="linha-base"></div>
+            </div>
+          </div>
+
+      
+          <div class="card">
+            <div class="card-header">
+              <span>Pedidos hoje</span>
+              <img src="carrinho.png" alt="Carrinho" class="icone-carrinho">
+            </div>
+            <div class="card-valor big-number" id="pedidos-hoje">
+              15
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+
+    </main>
+
+  </div>
+
+</body>
+</html>
