@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ConfeitariaS&C - Painel do Confeiteiro</title>
-  <link rel="stylesheet" href="confeiteiroPagina.css">
+  <link rel="stylesheet" href="ConfeiteiroeAdmPagina.css">
 </head>
 <body>
 
   <div class="container">
     
-    <!-- BARRA LATERAL (SIDEBAR) -->
+   
     <aside class="sidebar">
       <div class="logo-area">
         <img src="logoConfeitaria.png" alt="Logo Confeitaria S&C" class="logo">
@@ -72,6 +72,13 @@
           </div>
           <span>Financeiro</span>
         </a>
+        
+         <a href="entregas.html" class="item-menu">
+          <div class="circulo-icone">
+            <img src="entregas.png" alt="Entregas">
+          </div>
+          <span>Entregas</span>
+        </a>
 
         <a href="ajustes.html" class="item-menu">
           <div class="circulo-icone">
@@ -82,10 +89,10 @@
       </nav>
     </aside>
 
-    <!-- CONTEÚDO PRINCIPAL -->
+   
     <main class="main-content">
       
-      <!-- TOPO / CABEÇALHO -->
+     
       <header class="header-top">
         <div class="saudacao">
           Olá, <span id="nome-usuario">Confeiteiro(a)</span>
@@ -95,10 +102,10 @@
         </div>
       </header>
 
-      <!-- PAINEL DE CARDS (GRID 2x2) -->
+  
       <section class="dashboard-grid">
         
-        <!-- CARD 1: Pedidos hoje -->
+       
         <div class="card">
           <div class="card-header">
             <span>Pedidos hoje</span>
@@ -109,7 +116,7 @@
           </div>
         </div>
 
-        <!-- CARD 2: Faturamento -->
+     
         <div class="card">
           <div class="card-header centro">
             <span>Faturamento</span>
@@ -119,7 +126,7 @@
           </div>
         </div>
 
-        <!-- CARD 3: Produtos Populares -->
+       
        <div class="card">
           <div class="card-header centro">
             <span>Produtos Populares</span>
@@ -136,7 +143,7 @@
           </div>
         </div>
 
-        <!-- CARD 4: Vendas Semanais -->
+  
         <div class="card">
           <div class="card-header centro">
             <span>Vendas Semanais</span>
@@ -156,9 +163,9 @@
     </main>
 
   </div>
-  <!-- SCRIPT DO CARROSSEL -->
+
   <script>
-    // Altere/adicione aqui os caminhos das fotos e os nomes dos produtos
+   
     const produtos = [
       { imagem: 'brownie.png', nome: 'Brownie Ninho/Brigadeiro' },
       { imagem: 'bolo.png', nome: 'Bolo de Morango' },
