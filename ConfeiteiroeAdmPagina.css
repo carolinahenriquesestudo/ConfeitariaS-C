@@ -18,14 +18,14 @@ body {
   margin: 0;
 }
 
-/* CONTAINER PRINCIPAL (Sem margens extras nas pontas) */
+
 .container {
   display: flex;
   width: 100%;
   min-height: 100vh;
 }
 
-/* SIDEBAR ESQUERDA (Colada 100% na borda esquerda da tela) */
+
 .sidebar {
   width: 280px;
   background-color: #ff98bb;
@@ -66,7 +66,7 @@ body {
   font-weight: bold;
 }
 
-/* BOTAO LATERAL MAIOR E APENAS A IMAGEM (Sem fundo/borda extra) */
+
 .circulo-icone {
   width: 75px;
   height: 75px;
@@ -84,7 +84,7 @@ body {
   object-fit: contain;
 }
 
-/* ÁREA DE CONTEÚDO PRINCIPAL */
+
 .main-content {
   flex: 1;
   padding: 30px 40px;
@@ -93,7 +93,7 @@ body {
   gap: 25px;
 }
 
-/* TOPO / CABEÇALHO */
+
 .header-top {
   display: flex;
   justify-content: space-between;
@@ -112,7 +112,7 @@ body {
   margin: 0 auto;
 }
 
-/* ÍCONE DO USUÁRIO MAIOR E APENAS A IMAGEM */
+
 .perfil-avatar {
   width: 75px;
   height: 75px;
@@ -131,7 +131,7 @@ body {
   object-fit: contain;
 }
 
-/* GRID DOS CARDS */
+
 .dashboard-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -164,7 +164,7 @@ body {
   justify-content: center;
 }
 
-/* CARRINHO MAIOR */
+
 .icone-carrinho {
   width: 100px;
   height: 100px;
@@ -178,7 +178,7 @@ body {
   margin-top: 10px;
 }
 
-/* PRODUTOS POPULARES (Imagem do Brownie maior) */
+
 .carrossel-produto {
   display: flex;
   align-items: center;
@@ -209,7 +209,7 @@ body {
   color: #4d3618;
 }
 
-/* VENDAS SEMANAIS */
+
 .grafico-container {
   width: 80%;
   display: flex;
